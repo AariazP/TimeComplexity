@@ -3,8 +3,10 @@ import matplotlib.pyplot as plt
 # Ruta del archivo de resumen
 summary_file = 'ordenamiento/results/summary/summary.txt'
 
-# Diccionario para almacenar los tiempos de ejecución
-results = {}
+# Diccionarios para almacenar los tiempos de ejecución por archivo CSV
+results_diezmil = {}
+results_cienmil = {}
+results_millon = {}
 
 # Leer el archivo de resumen
 with open(summary_file, 'r') as file:
@@ -37,33 +39,52 @@ with open(summary_file, 'r') as file:
                 time_value *= 1000 * 60  # Convertir minutos a milisegundos.
 
             algo_name = algorithm_info.split()[0]
-            csv_file = algorithm_info.split()[2]
+            csv_file = algorithm_info.split()[-1]  # Cambiar para detectar el archivo correctamente
             
-            results[f"{algo_name} ({csv_file})"] = time_value
+            # Depuración para verificar el archivo CSV detectado
+            print(f"Archivo CSV detectado: {csv_file}")
 
-# Verificar si hay datos en el diccionario
-if not results:
-    print("No se encontraron datos en el archivo.")
-else:
-    print("Datos leídos correctamente:", results)
+            # Almacenar los tiempos en el diccionario correspondiente
+            if 'diezmil.csv' in csv_file:
+                results_diezmil[f"{algo_name} (diezmil)"] = time_value
+            elif 'cienmil.csv' in csv_file:
+                results_cienmil[f"{algo_name} (cienmil)"] = time_value
+            elif 'millon.csv' in csv_file:
+                results_millon[f"{algo_name} (millon)"] = time_value
 
-# Preparar los datos para el gráfico
-algorithms = list(results.keys())
-times = list(results.values())
+# Función para crear gráficos ordenados
+def generar_grafico(resultados, titulo, nombre_archivo):
+    if not resultados:
+        print(f"No se encontraron datos para {titulo}.")
+        return
+    
+    # Ordenar los resultados por tiempo de ejecución (valores)
+    sorted_results = sorted(resultados.items(), key=lambda x: x[1])
 
-# Crear el gráfico de barras
-plt.figure(figsize=(12, 6))
-plt.bar(algorithms, times, color='skyblue')
-plt.xlabel('Algoritmo (Archivo CSV)')
-plt.ylabel('Tiempo (milisegundos)')
-plt.title('Tiempos de Ejecución de Algoritmos de Ordenamiento')
-plt.xticks(rotation=45, ha='right')
+    # Separar algoritmos y tiempos ordenados
+    algorithms, times = zip(*sorted_results)
 
-# Ajustar los límites de los ejes (opcional)
-plt.ylim(0, max(times) * 1.1)
+    # Crear el gráfico de barras
+    plt.figure(figsize=(12, 6))
+    plt.bar(algorithms, times, color='skyblue')
+    plt.xlabel('Algoritmo')
+    plt.ylabel('Tiempo (milisegundos)')
+    plt.title(titulo)
+    plt.xticks(rotation=45, ha='right')
 
-plt.tight_layout()
+    # Cambiar la escala del eje y a logarítmica
+    plt.yscale('log')
 
-# Guardar el gráfico
-plt.savefig('ordenamiento/results/summary/times_plot.png')
-plt.show()
+    # Ajustar los límites de los ejes (opcional)
+    plt.ylim(min(times) * 0.9, max(times) * 1.1)
+
+    plt.tight_layout()
+
+    # Guardar el gráfico
+    plt.savefig(f'ordenamiento/results/summary/{nombre_archivo}.png')
+    plt.show()
+
+# Generar gráficos para cada conjunto de datos
+generar_grafico(results_diezmil, 'Tiempos de Ejecución con 10,000 Elementos', 'times_plot_diezmil')
+generar_grafico(results_cienmil, 'Tiempos de Ejecución con 100,000 Elementos', 'times_plot_cienmil')
+generar_grafico(results_millon, 'Tiempos de Ejecución con 1,000,000 Elementos', 'times_plot_millon')

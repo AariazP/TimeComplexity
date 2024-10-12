@@ -1,13 +1,13 @@
 Resumen de ejecución de algoritmos de ordenamiento
 ===================================
-bitonic_sort procesado con diezmil.csv: Bitonic Sort: 5.239 milisegundos
-bitonic_sort procesado con cienmil.csv: Bitonic Sort: 46.170 milisegundos
-bitonic_sort procesado con millon.csv: Bitonic Sort: 516.784 milisegundos
-bubble_sort procesado con diezmil.csv: Bubble Sort: 135.223 milisegundos
-bubble_sort procesado con cienmil.csv: Bubble Sort: 17.368 segundos
-merge_sort procesado con diezmil.csv: Merge Sort: 1.200 milisegundos
-merge_sort procesado con cienmil.csv: Merge Sort: 14.184 milisegundos
-merge_sort procesado con millon.csv: Merge Sort: 161.435 milisegundos
-quick_sort procesado con diezmil.csv: QuickSort: 0.666 milisegundos
-quick_sort procesado con cienmil.csv: QuickSort: 8.401 milisegundos
-quick_sort procesado con millon.csv: QuickSort: 101.396 milisegundos
+bitonic_sort procesado con diezmil.csv: Bitonic Sort: 5.193 milisegundos
+bitonic_sort procesado con cienmil.csv: Bitonic Sort: 46.091 milisegundos
+bitonic_sort procesado con millon.csv: Bitonic Sort: 503.442 milisegundos
+bubble_sort procesado con diezmil.csv: Bubble Sort: 134.691 milisegundos
+bubble_sort procesado con cienmil.csv: Bubble Sort: 17.433 segundos
+merge_sort procesado con diezmil.csv: Merge Sort: 1.182 milisegundos
+merge_sort procesado con cienmil.csv: Merge Sort: 14.080 milisegundos
+merge_sort procesado con millon.csv: Merge Sort: 161.752 milisegundos
+quick_sort procesado con diezmil.csv: QuickSort: 0.678 milisegundos
+quick_sort procesado con cienmil.csv: QuickSort: 8.419 milisegundos
+quick_sort procesado con millon.csv: QuickSort: 101.622 milisegundos
