@@ -1,16 +1,19 @@
 Resumen de ejecución de algoritmos de ordenamiento
 ===================================
-bitonic_sort procesado con diezmil.csv: Bitonic Sort: 13.176 milisegundos
-bitonic_sort procesado con cienmil.csv: Bitonic Sort: 154.882 milisegundos
-bitonic_sort procesado con millon.csv: Bitonic Sort: 1.659 segundos
-bubble_sort procesado con diezmil.csv: Bubble Sort: 411.120 milisegundos
-bubble_sort procesado con cienmil.csv: Bubble Sort: 36.304 segundos
-merge_sort procesado con diezmil.csv: Merge Sort: 2.051 milisegundos
-merge_sort procesado con cienmil.csv: Merge Sort: 24.868 milisegundos
-merge_sort procesado con millon.csv: Merge Sort: 392.685 milisegundos
-quick_sort procesado con diezmil.csv: QuickSort: 1.794 milisegundos
-quick_sort procesado con cienmil.csv: QuickSort: 22.344 milisegundos
-quick_sort procesado con millon.csv: QuickSort: 274.423 milisegundos
-results procesado con diezmil.csv: ./script.sh: line 40: ordenamiento/compilados/results: Is a directory
-results procesado con cienmil.csv: ./script.sh: line 40: ordenamiento/compilados/results: Is a directory
-results procesado con millon.csv: ./script.sh: line 40: ordenamiento/compilados/results: Is a directory
+bitonic_sort procesado con diezmil.csv: Bitonic Sort: 8.895 milisegundos
+bitonic_sort procesado con cienmil.csv: Bitonic Sort: 95.969 milisegundos
+bitonic_sort procesado con millon.csv: Bitonic Sort: 1.044 segundos
+bubble_sort procesado con diezmil.csv: Bubble Sort: 265.115 milisegundos
+bubble_sort procesado con cienmil.csv: Bubble Sort: 30.321 segundos
+merge_sort procesado con diezmil.csv: Merge Sort: 1.804 milisegundos
+merge_sort procesado con cienmil.csv: Merge Sort: 22.282 milisegundos
+merge_sort procesado con millon.csv: Merge Sort: 250.062 milisegundos
+pigeonhole_sort procesado con diezmil.csv: Pigeonhole Sort: 241.651 milisegundos
+pigeonhole_sort procesado con cienmil.csv: Pigeonhole Sort: 706.391 milisegundos
+pigeonhole_sort procesado con millon.csv: Pigeonhole Sort: 5.505 segundos
+quick_sort procesado con diezmil.csv: QuickSort: 1.263 milisegundos
+quick_sort procesado con cienmil.csv: QuickSort: 15.555 milisegundos
+quick_sort procesado con millon.csv: QuickSort: 191.755 milisegundos
+results procesado con diezmil.csv: ./script.sh: line 35: ordenamiento/compilados/results: Is a directory
+results procesado con cienmil.csv: ./script.sh: line 35: ordenamiento/compilados/results: Is a directory
+results procesado con millon.csv: ./script.sh: line 35: ordenamiento/compilados/results: Is a directory

@@ -10,12 +10,13 @@
 
 // Función para realizar la busqueda lineal
 int busquedaLineal(int arr[], int n, int objetivo) {
+    int index = -1;
     for (int i = 0; i < n; i++) {
         if (arr[i] == objetivo) {
-            return i;  // Retorna el índice donde se encontró el objetivo
+            index=i;  // Retorna el índice donde se encontró el objetivo
         }
     }
-    return -1;  // Retorna -1 si el objetivo no se encuentra
+    return index;  // Retorna -1 si el objetivo no se encuentra
 }
 
 

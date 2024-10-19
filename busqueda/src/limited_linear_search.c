@@ -9,8 +9,8 @@
 #include "utils.h"
 
 // Función para realizar la búsqueda lineal limitada
-int busqueda_lineal_limitada(int arr[], int n, int x, int limite) {
-    for (int i = 0; i < n && i < limite; i++) {
+int busqueda_lineal_limitada(int arr[], int n, int x) {
+    for (int i = 0; i < n; i++) {
         if (arr[i] == x) {
             return i;  // Retorna la posición donde se encuentra el elemento
         }
@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
 
     // Medir el tiempo de ejecución
     clock_t inicio = clock();
-    busqueda_lineal_limitada(arr, n, arr[n-1], 10);
+    busqueda_lineal_limitada(arr, n, arr[n-1]);
     clock_t fin = clock();
 
     // Mostrar el tiempo formateado

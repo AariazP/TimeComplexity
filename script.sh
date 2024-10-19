@@ -25,11 +25,6 @@ for algo in "$COMPILADOS_DIR"/*; do
 				continue
 			fi
 
-			#ignorar el pigeonhole_sort
-			if [[ "$algo_name" == "pigeonhole_sort" ]]; then
-				echo "Ignorando pigeonhole_sort"
-				continue
-			fi
 
 			#ignorar el stooge_sort
 			if [[ "$algo_name" == "stooge_sort" ]]; then

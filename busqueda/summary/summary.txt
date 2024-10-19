@@ -1,14 +1,14 @@
 Resumen de ejecución de algoritmos de ordenamiento
 ===================================
-binary_search procesado con cienmil_sorted.csv: Binary Search: 0.003 milisegundos
-binary_search procesado con diezmil_sorted.csv: Binary Search: 0.002 milisegundos
-binary_search procesado con millon_sorted.csv: Binary Search: 0.003 milisegundos
-jump_search procesado con cienmil_sorted.csv: Jump Search: 0.005 milisegundos
+binary_search procesado con cienmil_sorted.csv: Binary Search: 0.001 milisegundos
+binary_search procesado con diezmil_sorted.csv: Binary Search: 0.001 milisegundos
+binary_search procesado con millon_sorted.csv: Binary Search: 0.002 milisegundos
+jump_search procesado con cienmil_sorted.csv: Jump Search: 0.003 milisegundos
 jump_search procesado con diezmil_sorted.csv: Jump Search: 0.003 milisegundos
-jump_search procesado con millon_sorted.csv: Jump Search: 0.019 milisegundos
-limited_linear_search procesado con cienmil_sorted.csv: Limited Linear Search: 0.002 milisegundos
-limited_linear_search procesado con diezmil_sorted.csv: Limited Linear Search: 0.003 milisegundos
-limited_linear_search procesado con millon_sorted.csv: Limited Linear Search: 0.002 milisegundos
-linear_search procesado con cienmil_sorted.csv: Linear Search: 0.321 milisegundos
-linear_search procesado con diezmil_sorted.csv: Linear Search: 0.034 milisegundos
-linear_search procesado con millon_sorted.csv: Linear Search: 3.095 milisegundos
+jump_search procesado con millon_sorted.csv: Jump Search: 0.007 milisegundos
+limited_linear_search procesado con cienmil_sorted.csv: Limited Linear Search: 0.257 milisegundos
+limited_linear_search procesado con diezmil_sorted.csv: Limited Linear Search: 0.027 milisegundos
+limited_linear_search procesado con millon_sorted.csv: Limited Linear Search: 2.592 milisegundos
+linear_search procesado con cienmil_sorted.csv: Linear Search: 0.260 milisegundos
+linear_search procesado con diezmil_sorted.csv: Linear Search: 0.028 milisegundos
+linear_search procesado con millon_sorted.csv: Linear Search: 2.616 milisegundos

@@ -20,9 +20,9 @@ void pigeonhole_sort(int arr[], long n) {
 
     long range = max - min + 1;
 
+
     // Si el rango es mayor a un millón, se dividirá el problema
     if (range > 1000) {
-        fprintf(stderr, "El rango de valores es demasiado grande, ajustando el rango...\n");
         long bucket_size = range / 1000;  // Dividir el rango en 1000 buckets
         long i, j;
         for (i = 0; i < range; i += bucket_size) {
@@ -126,13 +126,6 @@ int main(int argc, char *argv[]) {
     char output_path[512];
     snprintf(output_path, sizeof(output_path), "../results/pigeonhole_sort/%s", output_filename);
 
-    // Verificar que el directorio "results/pigeonhole_sort" exista
-    if (access("../results/pigeonhole_sort", F_OK) == -1) {
-        if (mkdir("../results/pigeonhole_sort", 0777) == -1) {
-            perror("Error al crear el directorio results/pigeonhole_sort");
-            return EXIT_FAILURE;
-        }
-    }
 
     // Escribir el arreglo ordenado en el archivo CSV
     escribir_csv(output_path, arr, n);
